@@ -1,0 +1,73 @@
+#createDrinkFormContainer {
+  width: 88%;
+  height: 580px;
+  padding: 10px;
+  background-color: #fff;
+  margin-top: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  box-shadow: 3px 5px 15px 0px #bdbdbd;
+  position: relative;
+}
+#createDrinkFormContainer h1 {
+  text-align: center;
+  margin-top: 5px;
+  font-weight: 100;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipses;
+}
+#createDrinkForm {
+  width: 75%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.drinkNameInput {
+  width: 100%;
+  margin-bottom: 0px;
+}
+.drinkIngredientInput {
+  width: 35%;
+  margin-bottom: 20px;
+  clear: left;
+  float: left;
+  margin-right: 20px;
+}
+.ingredientAmountInput {
+  float: left;
+  margin-right: 20%;
+  width: 30%;
+}
+.imageSelection {
+  float: left;
+  clear: left;
+  margin-left: -5px;
+}
+#imageSelectionButton {
+  background-color: #1976d2;
+}
+.createDrinkInput {
+  margin-top: 5px;
+  display: inline-block;
+}
+.formSubmitButtons {
+  position: absolute;
+  left: 1%;
+  bottom: 5px;
+  width: 98%;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  float: left;
+  clear: left;
+  margin-top: 40px;
+}
+#submitButton {
+  background-color: #2196f3;
+}
+#cancelButton {
+  background-color: #f44336;
+}
+/*# sourceMappingURL=drinkCreate.css.map */

@@ -1,0 +1,13 @@
+@media (max-width: 830px) {
+  .navBarButton {
+    display: none;
+  }
+  #NavBarMenu,
+  #navBarLogo {
+    display: inline-block;
+  }
+  #slideOutNavBar {
+    display: flex;
+  }
+}
+/*# sourceMappingURL=navbarSmall.css.map */
