@@ -1,0 +1,21 @@
+<div id="drinkSelectionContainer">
+    <div id="drinkSelectionSearchContainer" md-whiteframe="{{$ctrl.height}}"
+         ng-init="$ctrl.height = 3" ng-mouseenter="$ctrl.height = 6" ng-mouseleave="$ctrl.height = 3" ng-focus="$ctrl.height = 6">
+        <i class="material-icons searchIcon">search</i>
+        <input id="drinkSelectionSearch" type="text" placeholder="Search" ng-model="$ctrl.searchValue"/>
+    </div>
+    <div class="drinkSelector"
+    ng-repeat="drink in $ctrl.testArray | filter:$ctrl.searchValue track by $index">
+        <div class="drinkSelectorImageContainer" ng-class="drink.color">
+            <img class="drinkSelectorImage" src="app/img/absolut.png"/>
+        </div>
+        <div class="drinkSelectorDescription">
+            <div class="descriptorHeader">
+                <span>Name</span>
+            </div>
+            <div class="descriptorContent">
+                <span>{{drink.name}}</span>
+            </div>
+        </div>
+    </div>
+</div>
