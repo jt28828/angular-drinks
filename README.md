@@ -8,4 +8,8 @@ Uses AngularJS with the angular-material library
 
 ## Installation
 
-npm install
+Install node modules with npm install.
+
+install node http-server globally
+
+npm start to start http-server on localhost port 8000
