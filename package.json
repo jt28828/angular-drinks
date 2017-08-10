@@ -1,16 +1,17 @@
 {
-    "name": "DrinkMachine",
-    "version": "1.0.0",
-    "keywords": ["util", "functional", "server", "client", "browser"],
-    "author": "James",
-    "contributors": [],
-    "devDependencies": {
+  "name": "drink-machine",
+  "version": "1.0.0",
+  "keywords": ["alcohol", "functional", "alcoholic", "delicious"],
+  "author": "James Turner",
+  "contributors": [],
+  "devDependencies": {
     "bower": "^1.7.7",
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-uglify": "^3.0.1",
     "http-server": "^0.9.0"
-    },
-    "scripts": {
-    "postinstall": "bower install",
-    "prestart": "npm install",
-    "start": "http-server ./public_html -a 192.168.1.102 -p 8000 -P -c-1"
-    }
+  },
+  "scripts": {
+    "start": "http-server ./public_html -a localhost -p 8000 -P -c-1"
+  }
 }
