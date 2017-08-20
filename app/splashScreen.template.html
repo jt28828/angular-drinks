@@ -1,24 +1,36 @@
 <div id="NavBar">
-    <span id="NavBarMenu" class="navBarButton" ng-click="openMenu()"><i class="material-icons">menu</i></span>
-    <span id="chooseDrink" class="navBarButton" ng-click="currentPage = 'selection'">Choose a drink</span>
-    <span id="createDrink" class="navBarButton" ng-click="currentPage = 'create'">Create a drink</span>
-    <span id="editDrink" class="navBarButton" ng-click="currentPage = 'editDrink'">Edit drinks</span>
-    <span id="addBottles" class="navBarButton" ng-click="currentPage = 'addBottle'">Add bottles</span>
-    <span id="editBottle" class="navBarButton" ng-click="currentPage = 'editBottle'">Edit bottles</span>
-    <span id="navBarLogo" class="navBarButton"><i class="material-icons">local_bar</i> Drink Machine</span>
+  <span id="NavBarMenu" class="navBarButton" ng-click="openMenu()"><i class="material-icons">menu</i></span>
+  <span id="chooseDrink" class="navBarButton" ng-click="currentPage = 'selection'">Choose a drink</span>
+  <span id="createDrink" class="navBarButton" ng-click="currentPage = 'create'">Create a drink</span>
+  <span id="editDrink" class="navBarButton" ng-click="currentPage = 'editDrink'">Edit drinks</span>
+  <span id="addBottles" class="navBarButton" ng-click="currentPage = 'addBottle'">Add bottles</span>
+  <span id="editBottle" class="navBarButton" ng-click="currentPage = 'editBottle'">Edit bottles</span>
+  <span id="navBarLogo" class="navBarButton"><i class="material-icons">local_bar</i> Drink Machine</span>
 </div>
 <div id="slideOutNavBar">
-    <span id="chooseDrink" class="slideNavBarButton" ng-click="currentPage= 'selection'">Choose a drink</span>
-    <span id="createDrink" class="slideNavBarButton" ng-click="currentPage = 'create'">Create a drink</span>
-    <span id="editDrink" class="slideNavBarButton" ng-click="currentPage= 'editDrink'">Edit drinks</span>
-    <span id="addBottles" class="slideNavBarButton" ng-click="currentPage= 'addBottle'">Add bottles</span>
-    <span id="editBottle" class="slideNavBarButton" ng-click="currentPage= 'editBottle'">Edit bottles</span>
+  <span id="chooseDrink" class="slideNavBarButton" ng-click="currentPage= 'selection'">Choose a drink</span>
+  <span id="createDrink" class="slideNavBarButton" ng-click="currentPage = 'create'">Create a drink</span>
+  <span id="editDrink" class="slideNavBarButton" ng-click="currentPage= 'editDrink'">Edit drinks</span>
+  <span id="addBottles" class="slideNavBarButton" ng-click="currentPage= 'addBottle'">Add bottles</span>
+  <span id="editBottle" class="slideNavBarButton" ng-click="currentPage= 'editBottle'">Edit bottles</span>
 </div>
 <div id="appContentContainer" ng-switch="currentPage">
-    <drink-selection class="animate-switch ng-enter" ng-switch-when="selection">...</drink-selection>
-    <drink-create class="animate-switch ng-enter" ng-switch-when="create">...</drink-create>
+  <div class="contentDiv" ng-switch-when="selection">
+    <drink-selection</drink-selection>
+  </div>
+  <div class="contentDiv" ng-switch-when="create">
+    <drink-create ></drink-create>
+  </div>
+  <div class="contentDiv">
     <ANY ng-switch-when="createDrink">...</ANY>
+  </div>
+  <div class="contentDiv">
     <ANY ng-switch-when="editDrink">...</ANY>
+  </div>
+  <div class="contentDiv">
     <ANY ng-switch-when="addBottle">...</ANY>
+  </div>
+  <div class="contentDiv">
     <ANY ng-switch-when="editBottle">...</ANY>
+  </div>
 </div>

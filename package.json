@@ -1,45 +1,32 @@
 {
-<<<<<<< HEAD
   "name": "drink-machine",
   "version": "1.0.0",
-  "keywords": ["alcohol", "functional", "alcoholic", "delicious"],
+  "keywords": [
+    "alcohol",
+    "functional",
+    "alcoholic",
+    "delicious"
+  ],
   "author": "James Turner",
   "contributors": [],
+  "dependencies": {
+    "jquery": "*",
+    "angular": "*",
+    "angular-material": "*",
+    "angular-animate": "*",
+    "angular-aria": "*",
+    "angular-cookies": "*",
+    "angular-route": "*",
+    "bootstrap": "*"
+  },
   "devDependencies": {
-    "bower": "^1.7.7",
     "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^2.2.1",
     "grunt-contrib-uglify": "^3.0.1",
     "http-server": "^0.9.0"
   },
   "scripts": {
-    "start": "http-server ./public_html -a localhost -p 8000 -P -c-1"
-=======
-  "name": "DrinkMachine",
-  "version": "1.0.0",
-  "keywords": ["util", "functional", "server", "client", "browser"],
-  "author": "James",
-  "contributors": [],
-  "dependencies": {
-    "angular": "1.6.x",
-    "angular-material": "1.x",
-    "angular-aria": "1.6.x",
-    "angular-mocks": "1.6.x",
-    "angular-route": "1.6.x",
-    "angular-animate": "1.6.x",
-    "angular-cookies": "1.6.x",
-    "bootstrap": "3.3.x",
-    "html5-boilerplate": "5.3.0",
-    "jquery": "3.1.1",
-    "font-awesome": "4.7",
-    "sweetalert2": "x.x",
-    "angular-svg-round-progressbar": "0.4.8"
-  },
-  "devDependencies": {
-    "http-server": "^0.9.0"
-  },
-  "scripts": {
-    "start": "http-server ./ -a localhost -p 8000 -P -c-1"
->>>>>>> 1a16d92422d173b7c4679d29f66d054a21b0be13
+    "start": "http-server ./app -a localhost -p 8000 -P -c-1 -o"
   }
 }

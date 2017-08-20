@@ -3,7 +3,7 @@
 angular.
         module('splashScreen').
         component('splashScreen', {
-            templateUrl: 'app/splashScreen.template.html',
+            templateUrl: 'splashScreen.template.html',
             controller: ['$scope',
                 function projectDeliverablesController($scope) {
                     var self = $scope;
