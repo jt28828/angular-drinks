@@ -2,12 +2,10 @@
 // Register `drinkSelection` component, along with its associated controller and template
 angular.module('drinkSelection').component('drinkSelection', {
   templateUrl: 'Selection/drinkSelection.template.html',
-  controller: ['$scope', '$cookies',
-    function drinkSelectionController($scope, $cookies) {
+  controller: [
+    '$cookies',
+    function drinkSelectionController($cookies) {
       var self = this;
-
-      self.testArray = JSON.parse($cookies.get('drinks'));
-      console.log(self.testArray);
 
       /* Generates a random number between 1 and 10 and retrieves a color from that*/
       self.generateColor = function(number) {
@@ -50,18 +48,39 @@ angular.module('drinkSelection').component('drinkSelection', {
         return color;
       };
 
-            self.testArray = [
-                {color: self.generateColor(1), name: 'martini'},
-                {color: self.generateColor(2), name: 'sour'},
-                {color: self.generateColor(3), name: 'margarita'},
-                {color: self.generateColor(4), name: 'mojito'},
-                {color: self.generateColor(5), name: 'daiquiri'},
-              {color: self.generateColor(6), name: 'manhattan'},
-                  {color: self.generateColor(7), name: 'long island iced tea'},
-                {color: self.generateColor(8), name: 'mai tai'},
-                  {color: self.generateColor(9), name: 'vodka raspberry'},
-                  {color: self.generateColor(10), name: 'highball'},
-              ];
+      self.testArray = [
+        {
+          color: self.generateColor(1),
+          name: 'martini'
+        }, {
+          color: self.generateColor(2),
+          name: 'sour'
+        }, {
+          color: self.generateColor(3),
+          name: 'margarita'
+        }, {
+          color: self.generateColor(4),
+          name: 'mojito'
+        }, {
+          color: self.generateColor(5),
+          name: 'daiquiri'
+        }, {
+          color: self.generateColor(6),
+          name: 'manhattan'
+        }, {
+          color: self.generateColor(7),
+          name: 'long island iced tea'
+        }, {
+          color: self.generateColor(8),
+          name: 'mai tai'
+        }, {
+          color: self.generateColor(9),
+          name: 'vodka raspberry'
+        }, {
+          color: self.generateColor(10),
+          name: 'highball'
+        }
+      ];
     }
 
   ]

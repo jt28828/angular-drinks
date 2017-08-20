@@ -1,6 +1,5 @@
 // out: ../css/main.css, sourcemap: false, compress: true
 @import (reference) "../materialColors/materialCols.less";
-@import "../materialColors/angularAnimate.less"; // Variables
 @navbarHeight: 80px;
 @font-face {
   font-family: 'Material Icons';
@@ -145,4 +144,11 @@ html {
 
 #appContentContainer {
   width: 100%;
+}
+
+.contentDiv.ng-enter {
+    animation: enter .5s;
+}
+.contentDiv.ng-leave {
+    animation: leave .5s;
 }
