@@ -13,13 +13,23 @@
 }
 /* Animation for items on leave */
 @keyframes leave {
-  0% {
+  from {
     transform: translateX(0%);
     opacity: 1;
   }
 
-  100% {
+  to {
     transform: translateX(50%);
     opacity: 0;
+  }
+}
+/* Animation for drinks on search */
+@keyframes drinkFlip {
+  from {
+    transform: rotateX(0deg);
+  }
+
+  to {
+    transform: rotateX(90deg);
   }
 }
