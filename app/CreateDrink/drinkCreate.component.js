@@ -1,7 +1,7 @@
 'use strict';
 // Register `drinkCreate` component, along with its associated controller and template
 angular.module('drinkCreate').component('drinkCreate', {
-  templateUrl: 'CreateDrink/drinkCreate.template.html',
+  templateUrl: 'app/CreateDrink/drinkCreate.template.html',
   controller: [
     '$scope', '$cookies',
     function drinkCreateController($scope, $cookies) {

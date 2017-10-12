@@ -1,7 +1,7 @@
 'use strict';
 // Register `drinkSelection` component, along with its associated controller and template
 angular.module('drinkSelection').component('drinkSelection', {
-  templateUrl: 'Selection/drinkSelection.template.html',
+  templateUrl: 'app/Selection/drinkSelection.template.html',
   controller: [
     '$cookies',
     function drinkSelectionController($cookies) {

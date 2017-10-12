@@ -13,11 +13,13 @@
     "jquery": "*",
     "angular": "*",
     "angular-material": "*",
+    "angular-messages": "*",
     "angular-animate": "*",
     "angular-aria": "*",
     "angular-cookies": "*",
     "angular-route": "*",
-    "bootstrap": "*"
+    "bootstrap": "*",
+    "font-awesome": "*"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
@@ -27,6 +29,6 @@
     "http-server": "^0.9.0"
   },
   "scripts": {
-    "start": "http-server ./app -a localhost -p 8000 -P -c-1 -o"
+    "start": "http-server ./ -a localhost -p 8000 -P -c-1 -o"
   }
 }
