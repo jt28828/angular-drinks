@@ -1,14 +1,6 @@
 // main: app.less
 @import (reference) "../materialColors/materialCols.less";
 @navbarHeight: 60px;
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../../fonts/MaterialIcons.eot");
-  /* For IE6-8 */
-  src: local('Material Icons'), local('MaterialIcons'), url("../../fonts/MaterialIcons.ttf") format('truetype');
-}
 
 body,
 html {
@@ -102,6 +94,10 @@ html {
   transition: background-position linear 0.2s;
   white-space: nowrap;
   outline: none;
+}
+
+.navBarButton.selected{
+  background-position: 0 -100%;
 }
 
 .navBarButton:hover {

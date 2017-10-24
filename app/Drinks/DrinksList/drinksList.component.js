@@ -3,15 +3,17 @@
  * Controls which views are currently visible as well as 
  * deleting current drinks
  */
-angular.module("drinks", ["drinkCreate", "drinksList"]).
-  component("drinks", {
-    templateUrl: "app/Drinks/drinks.template.html",
+angular.module('drinksList', []).
+  component('drinksList', {
+    templateUrl: 'app/Drinks/DrinksList/drinksList.template.html',
     controller: [
-      "$scope", "$cookies",
+      '$scope', '$cookies',
       function drinksController($scope, $cookies) {
-        "use strict";
+        'use strict';
         var self = this;
-        self.currentPage = "list";
+        self.currentPage = "create";
+
+
       }
     ]
   });

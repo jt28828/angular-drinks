@@ -1,7 +1,8 @@
-<div class="manageDrinksContainer">
-  <div id="appContentContainer" ng-switch="currentPage">
-    <div class="contentDiv" ng-switch-when="create">
-      <drink-create></drink-create>
-    </div>
+<div class="manageDrinksContainer" ng-switch="$ctrl.currentPage">
+  <div class="manageDrinksSubContainer" ng-switch-when="create">
+    <drink-create></drink-create>
+  </div>
+  <div class="manageDrinksSubContainer" ng-switch-when="list">
+    <drinks-list></drinks-list>
   </div>
 </div>
