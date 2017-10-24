@@ -3,5 +3,5 @@
 // Define the `splashScreen` module
 angular.module('splashScreen', [
   'drinkSelection',
-  'drinkCreate'
+  'drinks'
 ]);

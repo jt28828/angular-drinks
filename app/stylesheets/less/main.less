@@ -1,6 +1,6 @@
-// out: ../css/main.css, sourcemap: false, compress: true
+// main: app.less
 @import (reference) "../materialColors/materialCols.less";
-@navbarHeight: 80px;
+@navbarHeight: 60px;
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -13,6 +13,7 @@
 body,
 html {
   background-color: @clr-grey-100;
+  width: 100%;
   height: 100%;
   font-family: roboto;
   transition: all 0.5s;
@@ -20,6 +21,21 @@ html {
 
 ::-webkit-scrollbar {
   width: 0;
+}
+
+.loadingCover{
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  z-index: 999;
+}
+
+.loadingImage{
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  margin: auto;
 }
 
 #drinkSelection {
@@ -56,7 +72,6 @@ html {
   width: 100%;
   height: @navbarHeight;
   background-color: @clr-blue-400;
-  box-shadow: 0 5px 5px 0 @clr-grey-400;
   z-index: 100;
 }
 
@@ -68,7 +83,7 @@ html {
 
 #NavBarMenu i {
   font-size: 48px;
-  line-height: 80px;
+  line-height: @navbarHeight;
 }
 
 .navBarButton {
@@ -95,7 +110,7 @@ html {
 
 #slideOutNavBar {
   position: fixed;
-  top: 80px;
+  top: @navbarHeight;
   left: -300px;
   display: none;
   flex-direction: column;
@@ -142,8 +157,18 @@ html {
   animation: pour 1s linear;
 }
 
-#appContentContainer {
+#appContentContainer {    
   width: 100%;
+  height: ~'calc(100% - 80px)';
+  position: absolute;
+  top: 80px;
+}
+
+.contentDiv{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
 }
 
 .contentDiv.ng-enter {

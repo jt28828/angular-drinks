@@ -1,19 +1,23 @@
-'use strict';
-// Register `drinkCreate` component, along with its associated controller and template
-angular.module('drinkCreate').component('drinkCreate', {
-  templateUrl: 'app/CreateDrink/drinkCreate.template.html',
+
+/**
+ * The controller for the drinks create page
+ * controls creating and editing drinks
+ */
+angular.module('drinkCreate', []).component('drinkCreate', {
+  templateUrl: 'app/Drinks/CreateDrink/drinkCreate.template.html',
   controller: [
     '$scope', '$cookies',
     function drinkCreateController($scope, $cookies) {
+      'use strict';
       var self = this;
 
-      self.submit = function(){
+      self.submit = function () {
         var name = self.drink.name;
         var color = generateColor(Math.floor(Math.random()));
         var object = [{
           name: name,
           color: color
-        },{
+        }, {
           name: name,
           color: color
         }];
