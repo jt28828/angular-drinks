@@ -6,10 +6,11 @@
 angular.module('drinkCreate', []).component('drinkCreate', {
   templateUrl: 'app/Drinks/CreateDrink/drinkCreate.template.html',
   controller: [
-    '$scope', '$cookies',
-    function drinkCreateController($scope, $cookies) {
+    '$scope', '$cookies', "popup",
+    function drinkCreateController($scope, $cookies, popup) {
       'use strict';
       var self = this;
+      self.drink = {};
 
       self.submit = function () {
         var name = self.drink.name;
@@ -23,6 +24,18 @@ angular.module('drinkCreate', []).component('drinkCreate', {
         }];
         object = JSON.stringify(object);
         $cookies.put('drinks', object);
+      };
+
+      /**
+       * Stops editing a drink
+       */
+      self.cancelEdit = function () {
+        var drinkName = (self.drink != null && self.drink.name != null && self.drink.name != "") ? self.drink.name : "Untitled Drink";
+        popup.question("Do you want to stop editing " + drinkName).then(function clickedOk() {
+          console.log(self.drink);
+
+          self.closeEdit();
+        });
       };
 
       /* Generates a random number between 1 and 10 and retrieves a color from that*/
@@ -88,5 +101,9 @@ angular.module('drinkCreate', []).component('drinkCreate', {
       ];
     }
 
-  ]
+  ],
+  bindings: {
+    "closeEdit": "<",
+    "drink": "="
+  }
 });

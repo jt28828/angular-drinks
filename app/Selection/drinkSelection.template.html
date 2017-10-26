@@ -5,7 +5,7 @@
     <input id="drinkSelectionSearch" type="text" placeholder="Search" ng-model="$ctrl.searchValue" />
   </div>
   <div class="drinkSelectionScrollView">
-    <div class="drinkSelector" ng-repeat="drink in $ctrl.testArray | filter:$ctrl.searchValue">
+    <div class="drinkSelector" ng-repeat="drink in $ctrl.drinksList | filter:$ctrl.searchValue" ng-click="$ctrl.drinkSelected(drink)">
       <div class="drinkSelectorImageContainer" ng-class="drink.color">
         <img class="drinkSelectorImage" src="app/img/absolut.png" />
       </div>

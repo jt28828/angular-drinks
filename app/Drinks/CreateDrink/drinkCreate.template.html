@@ -3,14 +3,20 @@
   <div id="createDrinkForm">
     <form name="createDrink">
       <md-input-container class="drinkNameInput createDrinkInput">
-        <label>Drink Name</label>
+        <label>Name</label>
         <input ng-model="$ctrl.drink.name">
+      </md-input-container>
+      <md-input-container class="drinkNameInput createDrinkInput">
+        <label>Description</label>
+        <input ng-model="$ctrl.drink.description">
       </md-input-container>
       <div ng-repeat="bottle in $ctrl.bottles">
         <md-input-container class="drinkIngredientInput createDrinkInput">
           <label>Ingredient {{$index + 1}}</label>
           <md-select ng-model="$ctrl.drink.ingredients[$index]">
-            <md-option><em>None</em></md-option>
+            <md-option>
+              <em>None</em>
+            </md-option>
             <md-option ng-repeat="bottle in $ctrl.bottles" ng-value="bottle.name">
               {{bottle.name}}
             </md-option>
@@ -28,7 +34,7 @@
       <div class="formSubmitButtons">
         <div>
           <input class="ng-hide" type="reset" />
-          <label id="cancelButton" class="md-button md-raised md-primary">Cancel</label>
+          <label id="cancelButton" class="md-button md-raised md-primary" ng-click="$ctrl.cancelEdit()">Cancel</label>
         </div>
         <div>
           <input class="ng-hide" type="submit" />

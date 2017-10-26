@@ -1,31 +1,24 @@
 <div id="NavBar">
-  <span id="NavBarMenu" class="navBarButton" ng-click="openMenu()"><i class="material-icons">menu</i></span>
-  <span id="chooseDrink" class="navBarButton" ng-class="($ctrl.currentPage == 'selection')? 'selected' : ''" ng-click="$ctrl.currentPage = 'selection'">Choose a drink</span>
-  <span id="createDrink" class="navBarButton" ng-class="($ctrl.currentPage == 'manageDrinks')? 'selected' : ''" ng-click="$ctrl.currentPage = 'manageDrinks'">Manage drinks</span>
-  <span id="addBottles" class="navBarButton" ng-class="($ctrl.currentPage == 'manageBottles')? 'selected' : ''" ng-click="$ctrl.currentPage = 'manageBottles'">Manage bottles</span>
+  <span id="NavBarMenu" class="navBarButton" ng-click="$ctrl.openMenu()">
+    <i class="fa fa-bars"></i>
+  </span>
+  <span id="chooseDrink" class="navBarButton" ng-class="($ctrl.currentPage == 'selection')? 'selected' : ''" ng-click="$ctrl.changePage('selection')">Choose a drink</span>
+  <span id="createDrink" class="navBarButton" ng-class="($ctrl.currentPage == 'manageDrinks')? 'selected' : ''" ng-click="$ctrl.changePage('manageDrinks')">Manage drinks</span>
+  <span id="addBottles" class="navBarButton" ng-class="($ctrl.currentPage == 'manageBottles')? 'selected' : ''" ng-click="$ctrl.changePage('manageBottles')">Manage bottles</span>
 </div>
 <div id="slideOutNavBar">
-  <span id="chooseDrink" class="slideNavBarButton" ng-click="$ctrl.currentPage= 'selection'">Choose a drink</span>
-  <span id="createDrink" class="slideNavBarButton" ng-click="$ctrl.currentPage = 'manageDrinks'">Manage drinks</span>
-  <span id="editDrink" class="slideNavBarButton" ng-click="$ctrl.currentPage = 'manageBottles'">Manage bottles</span>
+  <span id="chooseDrink" class="slideNavBarButton" ng-click="$ctrl.changePage('selection')">Choose a drink</span>
+  <span id="createDrink" class="slideNavBarButton" ng-click="$ctrl.changePage('manageDrinks')">Manage drinks</span>
+  <span id="editDrink" class="slideNavBarButton" ng-click="$ctrl.changePage('manageBottles')">Manage bottles</span>
 </div>
 <div id="appContentContainer" ng-switch="$ctrl.currentPage">
-  <div class="contentDiv" ng-switch-when="selection">
-    <drink-selection></drink-selection>
+  <div class="contentDiv left" ng-switch-when="selection">
+    <drink-selection drinks-list="$ctrl.testDrinks"></drink-selection>
   </div>
-  <div class="contentDiv" ng-switch-when="manageDrinks">
-    <drinks></drinks>
+  <div class="contentDiv" ng-class="$ctrl.sideOfCenter" ng-switch-when="manageDrinks">
+    <drinks drinks-list="$ctrl.testDrinks"></drinks>
   </div>
-  <div class="contentDiv">
-    <ANY ng-switch-when="createDrink">...</ANY>
-  </div>
-  <div class="contentDiv">
-    <ANY ng-switch-when="editDrink">...</ANY>
-  </div>
-  <div class="contentDiv">
-    <ANY ng-switch-when="addBottle">...</ANY>
-  </div>
-  <div class="contentDiv">
-    <ANY ng-switch-when="editBottle">...</ANY>
+  <div class="contentDiv right" ng-switch-when="createDrink">
+    <ANY>...</ANY>
   </div>
 </div>

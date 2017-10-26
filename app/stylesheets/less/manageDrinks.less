@@ -1,4 +1,5 @@
 // main: app.less
+@import (reference) "../materialColors/materialCols.less";
 
 .manageDrinksContainer{
     width: 98%;
@@ -12,6 +13,15 @@
     height: 100%;
 }
 
+.manageDrinksSubContainer.ng-enter{
+    animation: enterTop .4s;
+
+}
+
+.manageDrinksSubContainer.ng-leave{
+    animation: leaveBottom .4s;
+}
+
 //Drinks List Section
 .drinksListFlexContainer{
     width: 100%;
@@ -22,6 +32,7 @@
     justify-content: space-around;
     align-content: flex-start;
     overflow: scroll;
+    z-index: 1;
 }
 
 .drinksListFlexItem{
@@ -33,9 +44,32 @@
     margin-bottom: 20px;
 }
 
+.addNewListItem{
+    cursor: pointer;
+    background-color: @clr-green-600;
+    transition: background-color .3s;
+    outline: none;
+}
+
+.addNewListItem:hover{
+    background-color: @clr-green-500;
+}
+
+.addNewListItem i{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 150px;
+    text-align: center;
+    font-style: normal;
+    line-height: 140px;
+    color: white;
+    font-weight: 300;
+    outline: none;
+}
+
 .drinksListTitle{
     font-size: 20px;
-    background-color: red;
     width: 100%;
     height: 20%;
     margin-top: 0px;
@@ -45,6 +79,7 @@
 .drinksListDescription{
     width: 100%;
     height: 50%;
+    overflow: hidden;
 }
 
 .drinksListActions{
@@ -55,6 +90,25 @@
 .drinksListActions i{
     float: left;
     width: 50%;
-    background-color: red;
+    font-size: 45px;
     text-align: center;
+    cursor: pointer;
+    outline: none;
+    transition: color .3s;
+}
+
+.drinksListActions i:nth-child(1){
+    color: @clr-blue-500;
+}
+
+.drinksListActions i:nth-child(1):hover{
+    color: @clr-blue-900;
+}
+
+.drinksListActions i:nth-child(2){
+    color: @clr-red-500;  
+}
+
+.drinksListActions i:nth-child(2):hover{
+    color: @clr-red-900;  
 }

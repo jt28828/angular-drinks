@@ -1,6 +1,6 @@
 // main: app.less
 @zHeight: 1; /* Animation for items on enter */
-@keyframes enter {
+@keyframes enterLeft {
   0% {
     transform: translateX(-50%);
     opacity: 0;
@@ -11,8 +11,34 @@
     opacity: 1;
   }
 }
+
+@keyframes enterRight {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
 /* Animation for items on leave */
-@keyframes leave {
+@keyframes enterTop {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* Animation for items on leave */
+@keyframes leaveLeft {
   from {
     position: absolute;
     transform: translateX(0%);
@@ -25,6 +51,35 @@
     opacity: 0;
   }
 }
+
+/* Animation for items on leave */
+@keyframes leaveRight {
+  from {
+    position: absolute;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  to {
+    position: absolute;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+}
+
+/* Animation for items on leave */
+@keyframes leaveBottom {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+}
+
 /* Animation for drinks on search */
 @keyframes drinkFlip {
   from {

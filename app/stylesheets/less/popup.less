@@ -1,0 +1,141 @@
+// main: app.less
+@import (reference) "../materialColors/materialCols.less";
+@import "../materialColors/materialBackgrounds.less";
+
+@popupSize : 50vw;
+
+#popupContainer{
+    position: fixed;
+    margin: auto;
+    left: 0; right: 0; top: 0; bottom: 0;
+    width: @popupSize;
+    max-width: 700px;
+    min-width: 300px;
+    height: @popupSize;
+    max-height: 500px;
+    min-height: 300px;
+    background-color: white;
+    z-index: 999;
+    box-shadow: 3px 5px 15px 0 @clr-grey-600;
+    animation: popupAppear .3s;
+}
+
+#popupShade{
+    position: fixed;
+    margin: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background-color: fade(@clr-grey-400, 30%);
+    animation: fadeIn .6s;
+}
+
+#popupTitle{
+    text-align: center;
+    height: 20%;
+    padding: 10px;
+}
+
+#popupTitle h2{
+    margin: 0px;
+    font-size: 5vw;
+    font-weight: 300;
+}
+
+#popupText{
+    height: 60%;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#popupText p{
+    font-size: 20px;
+}
+
+#popupControls{
+    width: 100%;
+    height: 15%;
+    margin-top: 4%;
+    padding: 0% 10% 0% 10%;
+}
+
+.popupButton{
+    width: 25%;
+    height: 70%;
+    display: inline-block;
+    text-align: center;
+    font-size: 3.5vw;
+    background-color: @clr-blue-500;
+    color: white;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+#popupAcceptButton{
+    float: right;
+}
+
+#popupAcceptButton:hover{
+    background-color: @clr-blue-600;
+}
+
+#popupRejectButton{
+    float: left;
+    background-color: @clr-red-500
+}
+
+#popupRejectButton:hover{
+    background-color: @clr-red-600;
+}
+
+#popupAcknowledgeButton{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#popupAcknowledgeButton:hover{
+    background-color: @clr-blue-600;
+}
+
+//Max font size
+@media (min-width: 1000px) {
+    #popupTitle h2{
+        font-size: 50px;
+    }
+    .popupButton{
+        font-size: 35px;
+    }
+}
+
+//Minimum font size
+@media (max-width: 600px) {
+    #popupTitle h2{
+        font-size: 32px;
+    }
+    .popupButton{
+        font-size: 20px;
+    }
+}
+
+@keyframes popupAppear {
+    from {
+        transform: translateY(30%);    
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);  
+        opacity: 1;    
+    }
+}
+
+@keyframes fadeIn {
+    from {    
+        opacity: 0;
+    }
+    to{
+        opacity: 1;    
+    }
+}

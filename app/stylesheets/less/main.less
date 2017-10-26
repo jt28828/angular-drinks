@@ -167,9 +167,18 @@ html {
   top: 0px;
 }
 
-.contentDiv.ng-enter {
-    animation: enter .5s;
+.contentDiv.left.ng-enter {
+    animation: enterLeft .5s;
 }
-.contentDiv.ng-leave {
-  animation: leave .5s;
+
+.contentDiv.left.ng-leave {
+  animation: leaveRight .5s;
+}
+
+.contentDiv.right.ng-enter {
+  animation: enterRight .5s;
+}
+
+.contentDiv.right.ng-leave {
+animation: leaveLeft .5s;
 }
