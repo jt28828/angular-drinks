@@ -1,0 +1,10 @@
+<div class="bottlesListTitle">
+  <p>{{$ctrl.bottle.name}}</p>
+</div>
+<div class="bottlesListDescription">
+  <p>{{$ctrl.bottle.description}}</p>
+</div>
+<div class="bottlesListActions">
+  <i class="fa fa-edit" ng-click="$ctrl.editBottle($ctrl.bottle)"></i>
+  <i class="fa fa-trash" ng-click="$ctrl.deleteBottle($ctrl.bottle, $ctrl.location)"></i>
+</div>

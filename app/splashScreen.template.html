@@ -16,9 +16,9 @@
     <drink-selection drinks-list="$ctrl.testDrinks"></drink-selection>
   </div>
   <div class="contentDiv" ng-class="$ctrl.sideOfCenter" ng-switch-when="manageDrinks">
-    <drinks drinks-list="$ctrl.testDrinks"></drinks>
+    <drinks drinks-list="$ctrl.testDrinks" bottles-list="$ctrl.testBottles"></drinks>
   </div>
-  <div class="contentDiv right" ng-switch-when="createDrink">
-    <ANY>...</ANY>
+  <div class="contentDiv right" ng-switch-when="manageBottles">
+    <bottles bottles-list="$ctrl.testBottles"></bottles>
   </div>
 </div>

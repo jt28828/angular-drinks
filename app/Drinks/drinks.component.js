@@ -33,6 +33,15 @@ angular.module("drinks", ["drinkCreate", "drinksManage"]).
         };
 
         /**
+         * Submits a drink to the server
+         * @param {Object} drink - The drink object to submit
+         */
+        self.submitDrink = function (drink) {
+          self.drinksList.push(drink);
+          self.closeEditScreen();
+        };
+
+        /**
          * Opens the edit screen to add a new drink
          */
         self.addDrink = function () {
@@ -44,10 +53,12 @@ angular.module("drinks", ["drinkCreate", "drinksManage"]).
          */
         self.closeEditScreen = function name() {
           self.currentPage = "manage";
+          self.currentDrink = null;
         };
       }
     ],
     bindings: {
-      "drinksList": "="
+      "drinksList": "=",
+      "bottlesList": "="
     }
   });

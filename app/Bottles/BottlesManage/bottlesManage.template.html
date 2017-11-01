@@ -1,0 +1,9 @@
+<div class="bottlesListFlexContainer">
+    <div class="bottlesListFlexItem addNewListItem" ng-click="$ctrl.addBottle()">
+        <i>+</i>
+    </div>
+    <div class="bottlesListFlexItem" ng-repeat="bottle in $ctrl.bottlesList track by $index">
+        <bottles-list-item bottle="bottle" edit-bottle="$ctrl.editBottle" delete-bottle="$ctrl.deleteBottle" location="$index">
+        </bottles-list-item>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="managebottlesContainer" ng-switch="$ctrl.currentPage">
+  <div class="managebottlesSubContainer" ng-switch-when="create">
+    <bottle-create close-edit="$ctrl.closeEditScreen" submit-bottle="$ctrl.submitBottle" bottle="$ctrl.currentBottle"></bottle-create>
+  </div>
+  <div class="managebottlesSubContainer" ng-switch-when="manage">
+    <bottles-manage bottles-list="$ctrl.bottlesList" edit-bottle="$ctrl.editBottle" delete-bottle="$ctrl.deleteBottle" add-bottle="$ctrl.addBottle"></bottles-manage>
+  </div>
+</div>

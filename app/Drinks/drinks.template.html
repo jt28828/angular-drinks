@@ -1,6 +1,6 @@
 <div class="manageDrinksContainer" ng-switch="$ctrl.currentPage">
   <div class="manageDrinksSubContainer" ng-switch-when="create">
-    <drink-create close-edit="$ctrl.closeEditScreen" drink="$ctrl.currentDrink"></drink-create>
+    <drink-create close-edit="$ctrl.closeEditScreen" submit-drink="$ctrl.submitDrink" drink="$ctrl.currentDrink" bottles-list="$ctrl.bottlesList"></drink-create>
   </div>
   <div class="manageDrinksSubContainer" ng-switch-when="manage">
     <drinks-manage drinks-list="$ctrl.drinksList" edit-drink="$ctrl.editDrink" delete-drink="$ctrl.deleteDrink" add-drink="$ctrl.addDrink"></drinks-manage>

@@ -4,8 +4,8 @@ angular.
     module("splashScreen").
     component("splashScreen", {
         templateUrl: "app/splashScreen.template.html",
-        controller: ["$scope", "$timeout",
-            function projectDeliverablesController($scope, $timeout) {
+        controller: ["$scope", "$timeout", "$cookies",
+            function projectDeliverablesController($scope, $timeout, $cookies) {
                 var self = this;
                 var menuOpen = false;
                 self.menuUsed = false;
@@ -88,7 +88,7 @@ angular.
                     return color;
                 };
 
-                self.testDrinks = [
+                var testDrinks = [
                     {
                         color: self.generateColor(1),
                         name: "martini",
@@ -141,6 +141,29 @@ angular.
                         id: 5
                     }
                 ];
+
+                var testBottles = [
+                    {
+                        name: "Vodka",
+                        description: "A clear spirit",
+                        id: 5
+                    }, {
+                        name: "Rum",
+                        description: "A dark spirit",
+                        id: 5
+                    }, {
+                        name: "Coke",
+                        description: "The classic Soft drink",
+                        id: 5
+                    }, {
+                        name: "Orange Juice",
+                        description: "Juice of an Orange",
+                        id: 5
+                    }
+                ];
+
+                self.testDrinks = testDrinks;
+                self.testBottles = testBottles;
             }
 
         ]
